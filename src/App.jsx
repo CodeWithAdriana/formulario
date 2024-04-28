@@ -1,9 +1,12 @@
 import Registro from "./components/Registro";
+import './App.css'
 
 function App() {
   return (
     <>
-      <Registro />
+      <div className="container">
+        <Registro />
+      </div>
     </>
   )
 }

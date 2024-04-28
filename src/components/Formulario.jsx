@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { limpiar } from "../utils/limpiar";
-
+import "./Formulario.css"
 
 function Formulario({ setAlert }) {
 
@@ -43,8 +43,7 @@ function Formulario({ setAlert }) {
                 <input onChange={(e) => setEmail(e.target.value)} placeholder="tuemail@ejemplo.com" type="text" value={email} />
                 <input onChange={(e) => setPassword(e.target.value)} placeholder="Contraseña" type="password" value={password} />
                 <input onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirma tu Contraseña" type="password" value={confirmPassword} />
-                <button type="submit">Registrarse</button>
-
+                <button type="submit" className="btn btn-success boton-enviar">Registrarse</button>
             </form>
         </>
     )
