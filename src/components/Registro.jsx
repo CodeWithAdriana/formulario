@@ -33,4 +33,14 @@ function Registro(){
   );
 }
 
+const SocialICons = () => {
+
+    const FacebookClick = () => {
+
+    };
+
+    const
+
+}
+
 export default Registro;
