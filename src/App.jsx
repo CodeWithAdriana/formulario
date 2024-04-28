@@ -1,5 +1,6 @@
 import Registro from "./components/Registro";
-import './App.css'
+import "./App.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   return (
@@ -8,6 +9,6 @@ function App() {
         <Registro />
       </div>
     </>
-  )
+  );
 }
 export default App;

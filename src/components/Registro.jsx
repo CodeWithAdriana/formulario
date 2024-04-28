@@ -1,39 +1,41 @@
-import { useState } from "react"
-import Formulario from "./Formulario"
-import { Alert } from "./Alert"
-import {SocialButton} from "./SocialButton";
+import { useState } from "react";
+import Formulario from "./Formulario";
+import { Alert } from "./Alert";
+import { SocialButton } from "./SocialButton";
 
-function Registro(){
-    const [alert, setAlert]= useState({mensaje:"", color:""})
+function Registro() {
+  const [alert, setAlert] = useState({ mensaje: "", color: "" });
 
-    return(
-        <>
-        <h3>Crea una Cuenta</h3>
+  const handleFacebookClick = () => {
+    window.open("https://www.facebook.com", "_blank");
+  };
 
-        <Formulario setAlert={setAlert} />
+  const handleTwitterClick = () => {
+    window.open("https://twitter.com", "_blank");
+  };
 
-        <Alert mensaje={alert.mensaje} color={alert.color}/>
-        </>
-    )
-}
+  const handleLinkedInClick = () => {
+    window.open("https://www.linkedin.com", "_blank");
+  };
 
-const SocialICons = () => {
+  return (
+    <div className="registro-container">
+      <h3>Crea una Cuenta</h3>
 
-    const FacebookClick = () => {
+      <div className="social-login">
+        <div className="social-buttons">
+          <SocialButton iconName="facebook" onClick={handleFacebookClick} />
+          <SocialButton iconName="twitter" onClick={handleTwitterClick} />
+          <SocialButton iconName="linkedin" onClick={handleLinkedInClick} />
+        </div>
+        <p>O usa tu email para registrarte:</p>
+      </div>
 
-    };
+      <Formulario setAlert={setAlert} />
 
-    const TwitterClick = () => {
-
-    };
-
-    const LinkedInClick = () => {
-
-    };
-
-    return (
-        <div className="social-login"></div>
-    )
+      <Alert mensaje={alert.mensaje} color={alert.color} />
+    </div>
+  );
 }
 
 export default Registro;
