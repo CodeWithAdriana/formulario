@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 import { useState } from "react";
 import Formulario from "./Formulario";
 import SocialButton from "./SocialButton";
 
 function Registro() {
   const [alert, setAlert] = useState({ mensaje: "", color: "" });
-=======
+
 import { useState } from "react"
 import Formulario from "./Formulario"
 import { Alert } from "./Alert"
@@ -22,7 +22,7 @@ function Registro(){
         <Alert mensaje={alert.mensaje} color={alert.color}/>
         </>
     )
->>>>>>> 24f06a51f4b21dc0f5b652a0a44c902e5d98fbe7
+
 
   return (
     <>
@@ -39,8 +39,17 @@ const SocialICons = () => {
 
     };
 
-    const
+    const TwitterClick = () => {
 
+    };
+
+    const LinkedInClick = () => {
+
+    };
+
+    return (
+        <div className="social-login"></div>
+    )
 }
 
 export default Registro;
