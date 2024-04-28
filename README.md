@@ -1,5 +1,6 @@
-Grupo: 
-Paulina Brajovic 
-Adriana Reyes 
+Nombre de los integrates de este proyecto: 
 
-Formulario. 
+Paulina Brajovic;
+Adriana Reyes. 
+
+
