@@ -17,7 +17,7 @@ function Formulario({ setAlert }) {
       password === "" ||
       confirmPassword === ""
     ) {
-      setAlert({ mensaje: "Debes completar todos los Campos", color: "red" });
+      setAlert({ mensaje: "Completa todos los campos!", color: "red" });
       //limpiar(setUser, setEmail, setPassword, setConfirmPassword);
       return;
     }
@@ -55,24 +55,28 @@ function Formulario({ setAlert }) {
           onChange={(e) => setUser(e.target.value)}
           placeholder="Nombre"
           type="text"
+          className="form-control"
           value={user}
         />
         <input
           onChange={(e) => setEmail(e.target.value)}
           placeholder="tuemail@ejemplo.com"
           type="text"
+          className="form-control"
           value={email}
         />
         <input
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Contraseña"
           type="password"
+          className="form-control"
           value={password}
         />
         <input
           onChange={(e) => setConfirmPassword(e.target.value)}
           placeholder="Confirma tu Contraseña"
           type="password"
+          className="form-control"
           value={confirmPassword}
         />
         <button type="submit" className="btn btn-success boton-enviar">

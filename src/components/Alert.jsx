@@ -8,9 +8,9 @@ export const Alert = ({ mensaje, color }) => {
                 mensaje && 
                 (
                     color === 'red' ?
-                    <div class="alert alert-danger alert-mensaje" role="alert">{mensaje}</div>
+                    <div className="alert alert-danger alert-mensaje" role="alert">{mensaje}</div>
                     :
-                    <div class="alert alert-primary alert-mensaje" role="alert">{mensaje}</div>
+                    <div className="alert alert-primary alert-mensaje" role="alert">{mensaje}</div>
                 )
             }
         </>
