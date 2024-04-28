@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { limpiar } from "../utils/limpiar";
+import { validatePassword } from "../utils/validar";
 import "./Formulario.css";
 
 function Formulario({ setAlert }) {
@@ -17,25 +18,33 @@ function Formulario({ setAlert }) {
       confirmPassword === ""
     ) {
       setAlert({ mensaje: "Debes completar todos los Campos", color: "red" });
-      limpiar(setUser, setEmail, setPassword, setConfirmPassword);
+      //limpiar(setUser, setEmail, setPassword, setConfirmPassword);
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setAlert({ mensaje: "El formato de email es incorrecto", color: "red" });
-      limpiar(setUser, setEmail, setPassword, setConfirmPassword);
+      //limpiar(setUser, setEmail, setPassword, setConfirmPassword);
+      return;
+    }
+
+    const errorEmail = validatePassword(password);
+
+    if (errorEmail !== "") {
+      setAlert({ mensaje: errorEmail, color: "red" });
+      //limpiar(setUser, setEmail, setPassword, setConfirmPassword);
       return;
     }
 
     if (password !== confirmPassword) {
       setAlert({ mensaje: "Los Password deben coincidir", color: "red" });
-      limpiar(setUser, setEmail, setPassword, setConfirmPassword);
+      //limpiar(setUser, setEmail, setPassword, setConfirmPassword);
       return;
-    } else {
-      setAlert({ mensaje: "Bienvenido", color: "green" });
-      limpiar(setUser, setEmail, setPassword, setConfirmPassword);
     }
+
+    setAlert({ mensaje: "Bienvenido", color: "green" });
+    limpiar(setUser, setEmail, setPassword, setConfirmPassword);
     console.log({ user, email, password, confirmPassword });
   }
 
