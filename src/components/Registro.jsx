@@ -1,14 +1,7 @@
-
-import { useState } from "react";
-import Formulario from "./Formulario";
-import SocialButton from "./SocialButton";
-
-function Registro() {
-  const [alert, setAlert] = useState({ mensaje: "", color: "" });
-
 import { useState } from "react"
 import Formulario from "./Formulario"
 import { Alert } from "./Alert"
+import {SocialButton} from "./SocialButton";
 
 function Registro(){
     const [alert, setAlert]= useState({mensaje:"", color:""})
@@ -22,15 +15,6 @@ function Registro(){
         <Alert mensaje={alert.mensaje} color={alert.color}/>
         </>
     )
-
-
-  return (
-    <>
-      <h3>Completa el Formulario</h3>
-      <Formulario setAlert={setAlert} />
-      {alert.mensaje && <h1 style={{ color: alert.color }}>{alert.mensaje}</h1>}
-    </>
-  );
 }
 
 const SocialICons = () => {
