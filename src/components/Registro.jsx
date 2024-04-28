@@ -28,7 +28,7 @@ function Registro() {
           <SocialButton iconName="twitter" onClick={handleTwitterClick} />
           <SocialButton iconName="linkedin" onClick={handleLinkedInClick} />
         </div>
-        <p>O usa tu email para registrarte:</p>
+        <p>O usa tu email para registrarte</p>
       </div>
 
       <Formulario setAlert={setAlert} />
